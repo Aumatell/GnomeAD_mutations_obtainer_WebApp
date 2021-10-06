@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% block body %}
+<div>
+    <br><br>
+    <form action="/transform_results" method="POST">
+        <label>Your Uniprot ID's:</label><br>
+        <textarea name="input_seq" rows=10 cols=122></textarea>
+        <br><br>
+        <input type="ratio" name="sequences_doc" value="False">
+        <label>Sequences file</label><br>
+        <input type="ratio" name="mutations_doc" value="False">
+        <label>Mutations file</label><br>
+        <input type="radio" name="per_gene" value="False">
+        <label>Plots of all genes together</label><br>
+        <input type="radio" name="per_gene" value="True">
+        <label>Plots gene per gene</label><br>
+        <input type="ratio" name="plots_type1" value="True">
+        <label>Plot Impact</label><br>
+        <input type="ratio" name="plots_type2" value="True">
+        <label>Plot Consequence</label><br>
+        <input type="ratio" name="plots_type3" value="True">
+        <label>Plot Feature</label><br>
+        <input type="ratio" name="plots_type4" value="True">
+        <label>Plot exon</label><br>
+        <input type="ratio" name="plots_type5" value="True">
+        <label>Plot intron</label><br>
+        <input type="ratio" name="plots_type6" value="True">
+        <label>Plot protein position</label><br>
+        <br>
+        <input type="submit" name="submit" value="Run">
+        <p></p><br>
+    </form>
+</div>
+{% endblock %}
